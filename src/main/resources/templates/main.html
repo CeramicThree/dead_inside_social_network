@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Home</title>
+</head>
+<body onload="connect()">
+<header class="main_header mx-auto" th:include="fragments/header.html :: header"></header>
+<div class="user_profile">
+    <img class="user_pic" th:src="${userpic}" alt="userPic">
+    <p class="user_name" th:text="'Имя: ' + ${name}"/>
+    <p class="user_email" th:text="'Почта: ' + ${email}"/>
+    <p class="user_gender" th:text="'Пол: ' + ${gender}"/>
+    <p class="user_locale" th:text="'Страна: ' + ${locale}"/>
+    <p class="user_lastvisit" th:text="'Был в сети: ' + ${lastvisit}"/>
+</div>
+<div class="chat mx-auto">
+    <div class="chat_window mx-auto">
+        <ul class="chat_messages">
+            <li class="message">
+                <img class="message_image" src="https://images6.fanpop.com/image/photos/40500000/Ken-Kaneki-tokyo-ghoul-40573336-500-395.gif" alt="avatar">
+                <div class="my-auto message_text">
+                    <p>Тысяча минус семь</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <form id="message_form" class="form_message mx-auto">
+        <div class="input-group mb-3">
+            <input id="message_input" name="message" type="text" class="form-control" placeholder="Your message" aria-label="msg"
+                   aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-light" type="submit" id="send">Send</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="/static/js/main.js"></script>
+<script src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
+<script src="/webjars/sockjs-client/1.0.2/sockjs.js"></script>
+</body>
+</html>

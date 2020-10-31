@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/auth.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div id="carouselBackground" class="carousel slide carousel-fade" data-interval="5000" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.pinimg.com/originals/a1/cf/54/a1cf54419c34120a90408d4df33628e3.jpg"
+                 class="d-block w-100" alt="Kaneki 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i1.wp.com/bloody-disgusting.com/wp-content/uploads/2016/06/tokyo-ghoul-pic.jpg?w=1920&ssl=1"
+                 class="d-block w-100" alt="Kaneki 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://u.kanobu.ru/editor/images/7/64b39b85-a38d-4f7a-b73c-dd6673a502cc.jpg"
+                 class="d-block w-100" alt="Kaneki 3">
+        </div>
+        <div class="carousel-item">
+            <img src="https://funart.pro/uploads/posts/2020-02/1580550184_p-tokiiskii-gul-tokyo-ghoul-anime-23.jpg"
+                 class="d-block w-100" alt="Kaneki 4">
+        </div>
+        <div class="carousel-item">
+            <img src="https://images4.alphacoders.com/596/thumb-1920-596398.jpg" class="d-block w-100" alt="Kaneki 5">
+        </div>
+    </div>
+</div>
+
+<div class="login">
+    <h2 class="mx-auto">Go Home</h2>
+    <form class="login_form" method="post">
+        <label>
+            <input class="form-control" name="name" type="text" placeholder="Name">
+        </label>
+        <label>
+            <input class="form-control" name="pass" type="password" placeholder="Password">
+        </label>
+        <button type="submit" class="btn btn-outline-light mx-auto">Login</button>
+        <a id="google_link" class="mx-auto" href="http://localhost:8080/oauth2/authorization/google"><img src="/static/images/google-icon.png"></a>
+    </form>
+
+<!--    <form th:action="https://steamcommunity.com/oauth/login?response_type=&client_id=&state=">-->
+<!--        <button type="submit">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">-->
+<!--                <path d="M22.411 9.681c0 .924-.751 1.676-1.676 1.676-.924 0-1.676-.752-1.676-1.676s.752-1.676 1.676-1.676c.925 0 1.676.752 1.676 1.676zm1.589 0c0 1.801-1.464 3.282-3.303 3.263l-2.872 2.141-.006.002c-.008 1.369-1.111 2.483-2.485 2.496-1.24.01-2.257-.872-2.484-2.021l-8.962-3.769c-.39.256-.854.409-1.354.414-1.398.012-2.521-1.109-2.534-2.486-.014-1.395 1.113-2.534 2.511-2.534 1.213 0 2.228.863 2.459 2.013l8.971 3.772c.416-.272.896-.418 1.428-.407l2.105-2.946c.033-1.773 1.48-3.202 3.262-3.202 1.802 0 3.264 1.461 3.264 3.264zm-20.794 1.826l-1.226-.515c-.716-.301-1.052-1.125-.751-1.84.301-.716 1.125-1.052 1.841-.751l1.211.509c-.303-.678-.984-1.153-1.77-1.153-1.096.004-1.951.895-1.941 1.958.01 1.044.861 1.926 1.958 1.922.236-.002.464-.048.678-.13zm14.045 3.547c-.01-1.06-.88-1.922-1.939-1.922-.229.001-.455.04-.686.127l1.229.517c.716.301 1.052 1.125.751 1.84-.301.715-1.124 1.052-1.841.751l-1.23-.518c.302.685.985 1.165 1.794 1.162 1.072-.009 1.932-.884 1.922-1.957zm5.703-5.373c0-1.224-.995-2.219-2.219-2.219-1.223 0-2.219.995-2.219 2.219 0 1.223.996 2.219 2.219 2.219 1.224 0 2.219-.996 2.219-2.219z"/>-->
+<!--            </svg>-->
+<!--        </button>-->
+<!--    </form>-->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
