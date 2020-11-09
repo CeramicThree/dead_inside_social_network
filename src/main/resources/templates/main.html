@@ -12,7 +12,7 @@
 <header class="main_header mx-auto" th:include="fragments/header.html :: header"></header>
 <div class="user_profile">
     <img class="user_pic" th:src="${userpic}" alt="userPic">
-    <p class="user_name" th:text="'Имя: ' + ${name}"/>
+    <p class="user_name" th:text="${name}"/>
     <p class="user_email" th:text="'Почта: ' + ${email}"/>
     <p class="user_gender" th:text="'Пол: ' + ${gender}"/>
     <p class="user_locale" th:text="'Страна: ' + ${locale}"/>
@@ -21,12 +21,6 @@
 <div class="chat mx-auto">
     <div class="chat_window mx-auto">
         <ul class="chat_messages">
-            <li class="message">
-                <img class="message_image" src="https://images6.fanpop.com/image/photos/40500000/Ken-Kaneki-tokyo-ghoul-40573336-500-395.gif" alt="avatar">
-                <div class="my-auto message_text">
-                    <p>Тысяча минус семь</p>
-                </div>
-            </li>
         </ul>
     </div>
     <form id="message_form" class="form_message mx-auto">

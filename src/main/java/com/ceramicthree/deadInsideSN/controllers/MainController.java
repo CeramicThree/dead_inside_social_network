@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.security.Principal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -54,15 +55,26 @@ public class MainController {
 
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/public")
-    public Message sendMessage(@Payload Message message) throws Exception {
-        User user = getUser();
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm yyyy:MM:mm");
-        message.setSenderName(user.getName());
-        message.setSenderId(user.getId());
-        message.setSenderPic(user.getUserpic());
-        message.setTimestamp(dateFormat.format(new Date(System.currentTimeMillis())));
-        logger.info("Message from " + message.getSenderName() + "sended");
-        return message;
+    public Message sendMessage(@Payload Message message, Principal principal) throws Exception {
+        Optional<User> userOptional = userRepository.findById(principal.getName());
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            DateFormat dateFormat = new SimpleDateFormat("HH:mm yyyy:MM:mm");
+            message.setSenderName(user.getName());
+            message.setSenderId(user.getId());
+            message.setSenderPic(user.getUserpic());
+            message.setTimestamp(dateFormat.format(new Date(System.currentTimeMillis())));
+            logger.info("Message from " + message.getSenderName() + " sended");
+            return message;
+        }else {
+            Message newMessage = new Message();
+            newMessage.setSenderName("null");
+            newMessage.setSenderId("null");
+            newMessage.setSenderPic("null");
+            message.setTimestamp("null");
+            logger.info("User not found");
+            return newMessage;
+        }
     }
 
     @MessageMapping("/chat.addUser")

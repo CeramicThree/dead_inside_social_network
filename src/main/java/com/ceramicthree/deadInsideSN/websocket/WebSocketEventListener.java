@@ -25,6 +25,6 @@ public class WebSocketEventListener {
 
     @EventListener
     public void handleWebSocketDisconnectListener(SessionDisconnectEvent event){
-        log.info("Disconnected");
+        log.info("User Disconnected");
     }
 }

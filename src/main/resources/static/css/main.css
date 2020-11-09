@@ -15,6 +15,9 @@ a:hover {
     border: .05rem solid #fff;
 }
 
+.hidden{
+    display: none;
+}
 
 html,
 body {
