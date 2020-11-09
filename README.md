@@ -3,4 +3,7 @@
 
 Let's go home, Kaneki... :rabbit: :rabbit: :rabbit:
 ## Social network for ghoules. 
-Status: work in progress... 
+Status: Public chat window working succesfully. But so much work still left...
+
+## Chat process example.
+![picture](deadinside.gif)
