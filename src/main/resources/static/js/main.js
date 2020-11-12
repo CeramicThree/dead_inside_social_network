@@ -1,7 +1,5 @@
 'use strict';
 
-var usernamePage = document.querySelector('#username-page');
-var chatPage = document.querySelector('#chat-page');
 var messageForm = document.querySelector('#message_form');
 var messageInput = document.querySelector('#message_input');
 var messageArea = document.querySelector('.chat_messages');
@@ -9,6 +7,11 @@ var connectButton = document.querySelector('#connect_button');
 
 var stompClient = null;
 var username = null;
+
+document.querySelector('#Home').classList.add('active')
+document.querySelector('#Profile').classList.remove('active')
+document.querySelector('#ZXC').classList.remove('active')
+document.querySelector('#Info').classList.remove('active')
 
 function connect(event) {
     username = document.querySelector('.user_name').textContent.trim();
@@ -50,7 +53,7 @@ function onMessageReceived(payload) {
     messageElement.appendChild(messageImg);
     messageElement.appendChild(messageDiv);
     messageArea.appendChild(messageElement);
-    messageArea.scrollTop = messageArea.scrollHeight;
+    document.querySelector('.chat_window').scrollTop = document.querySelector('.chat_window').scrollHeight
 }
 
 function sendMessage(event) {

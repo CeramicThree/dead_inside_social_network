@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/CeramicThree/dead_inside_project#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.1.0",
     "sockjs": "^0.3.21",
     "stompjs": "^2.3.3"
   }

@@ -1,0 +1,51 @@
+.profile_window{
+    position: relative;
+    width: 70%;
+    height: 80%;
+    margin-top: 8%;
+    background: rgba(0, 0, 0, .7);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.profile_image img{
+    position: absolute;
+    margin-left: 5%;
+    top: -16%;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 130px;
+
+}
+
+
+.profile_name{
+    position: relative;
+    font-size: 28px;
+}
+
+.profile_visit{
+    position: absolute;
+    font-size: 13px;
+}
+
+.profile_mail{
+    position: absolute;
+    margin-top: 3%;
+    font-size: 13px;
+}
+
+.profile_locale{
+    position: absolute;
+    margin-top: 6%;
+    font-size: 13px;
+}
+
+.profile_info{
+    margin-left: 20%;
+    height: 25%;
+    width: 30%;
+    border-bottom: 1px solid white;
+}
+
